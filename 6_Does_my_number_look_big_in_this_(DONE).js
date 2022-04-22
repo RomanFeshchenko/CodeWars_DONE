@@ -1,6 +1,7 @@
-const value = 37155;
+const value = 153;
 let sum = 0;
-let array = value.toString(10).split("").map((int) => parseInt(int, 10));
+//let array = value.toString(10).split("").map((int) => parseInt(int, 10));
+let array = value.toString().split("");
 for (let i = 0; i < array.length; i++) {
     sum += Math.pow(array[i], array.length);
 }

@@ -1,5 +1,18 @@
+/*
+const str = "How can mirrors be real if our eyes aren't real";
+let arr = str.split(" ");
+let arr1 = arr.map((el) => el.charAt(0).toUpperCase() + el.slice(1));
+let newString = arr1.join(" ");
 
-
+console.log(arr);
+console.log(arr1);
+console.log(newString);
+*/
+let str = "How can mirrors be real if our eyes aren't real";
+let newString = str.split(" ")
+  .map((el) => el.charAt(0).toUpperCase() + el.slice(1))
+  .join(" ");
+console.log(newString);
 
 //---------------------------------------------------------------------------------------------------------------------
 /*

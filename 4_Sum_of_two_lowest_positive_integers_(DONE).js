@@ -1,18 +1,16 @@
-//https://gist.github.com/briancbarrow/df81c7e6a24ed4708f25f6b373e232a9
-function sumTwoSmallestNumbers(numbers) {
-  var longestArr = [];
-  for (var i = 0; i < numbers.length; i++) {
-    if (numbers[i] < longestArr[0] || longestArr[0] == null) {
-      if (longestArr[0] < longestArr[1] || longestArr[1] == null) {
-        longestArr[1] = longestArr[0];
-      }
-      longestArr[0] = numbers[i];
-    } else if (numbers[i] < longestArr[1] || longestArr[1] == null) {
-      longestArr[1] = numbers[i];
-    }
-  }
-  return longestArr[0] + longestArr[1];
+function sumTwoSmallestNumbers(numbers) {  
+  let result;
+  result = numbers.sort((a, b) => a - b);
+  //result = result[0]+result[1];
+  //return result;
+  return result[0]+result[1];
 }
+
+console.log(sumTwoSmallestNumbers([5, 8, 12, 19, 22]));//13
+console.log(sumTwoSmallestNumbers([15, 28, 4, 2, 43]));//6
+console.log(sumTwoSmallestNumbers([3, 87, 45, 12, 7]));//10
+console.log(sumTwoSmallestNumbers([23, 71, 33, 82, 1]));//24
+console.log(sumTwoSmallestNumbers([52, 76, 14, 12, 4]));//16
 //---------------------------------------------------------------------------------------------------------------------
 /*
 Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. 
