@@ -6,6 +6,8 @@ function wave(str) {
   }
   return result;
 }
+
+
 console.log(wave("hello"));
 console.log(wave("codewars"));
 console.log(wave(""));

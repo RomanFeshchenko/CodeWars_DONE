@@ -1,3 +1,8 @@
+//function RomanNumerals(simbol) {
+//  if (typeof simbol === Number) return toRoman(simbol);
+//  else return fromRoman(simbol);
+//}
+
 function toRoman(ArabicNum) {
   let values = {
     M: 1000,
@@ -14,7 +19,7 @@ function toRoman(ArabicNum) {
     IV: 4,
     I: 1,
   },
-  resRomanNum = "",
+    resRomanNum = "",
     a;
   for (let key in values) {
     a = Math.floor(ArabicNum / values[key]);
@@ -30,20 +35,20 @@ function toRoman(ArabicNum) {
 
 function fromRoman(RomanNum) {
   let values = {
-      I: 1,
-      IV: 4,
-      V: 5,
-      IX: 9,
-      X: 10,
-      XV: 40,
-      L: 50,
-      XC: 90,
-      C: 100,
-      CD: 400,
-      D: 500,
-      CM: 900,
-      M: 1000,
-    },
+    I: 1,
+    IV: 4,
+    V: 5,
+    IX: 9,
+    X: 10,
+    XV: 40,
+    L: 50,
+    XC: 90,
+    C: 100,
+    CD: 400,
+    D: 500,
+    CM: 900,
+    M: 1000,
+  },
     digits = Object.keys(values),
     resArabicNum = 0;
   for (let symbol = 0; symbol < RomanNum.length; ++symbol) {
@@ -58,6 +63,8 @@ function fromRoman(RomanNum) {
   return resArabicNum;
 }
 
+//console.log(RomanNumerals.toRoman(1000), "M");
+//console.log(RomanNumerals.fromRoman("XXI"), 21);
 console.log(toRoman(1000), "M");
 console.log(toRoman(4), "IV");
 console.log(toRoman(1), "I");
